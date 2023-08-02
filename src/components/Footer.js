@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 class Footer extends Component {
   render() {
@@ -10,29 +10,34 @@ class Footer extends Component {
               <i className={network.class}></i>
             </a>
           </span>
-        );
-      });
+        )
+      })
     }
 
     return (
-      <footer>
+      <footer id="portfolio">
+        <h1 className="section-title" style={{ color: 'black' }}>
+          <span>Get In Touch</span>
+        </h1>
         <div className="col-md-12">
-          <div className="social-links">{networks}</div>
+          <div className="social-links d-flex flex-column justify-content-around flex-md-row">
+            {networks}
+          </div>
 
-          <div className="copyright py-4 text-center">
+          <div className="copyright py-6 text-center copyright-container">
             <div className="container">
-              <small>
-                Copyright &copy;{" "}
+              <small className="copyright-tag">
+                Copyright &copy;{' '}
                 {this.props.sharedBasicInfo
                   ? this.props.sharedBasicInfo.name
-                  : "???"}
+                  : '???'}
               </small>
             </div>
           </div>
         </div>
       </footer>
-    );
+    )
   }
 }
 
-export default Footer;
+export default Footer
